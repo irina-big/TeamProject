@@ -2,6 +2,7 @@ import allclasses.irinabig.Animal;
 import allclasses.irinabig.Cat;
 import allclasses.irinabig.Feline;
 import allclasses.irinabig.Lion;
+import allclasses.strelnikov.Capybara;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,6 +14,7 @@ public class Main {
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
+        showClassesStrelnikov();
 
     }
     public  static void showClassesIrinaBig() throws Exception {
@@ -29,5 +31,18 @@ public class Main {
         System.out.println("Кошачьи питаются => " + feline.getFood("Хищник") .toString());
 
 
+    }
+
+    public static void showClassesStrelnikov(){
+        Capybara capy = new Capybara("Каппи", 3, 35.5);
+
+        // Тестируем методы
+        capy.displayInfo();        // Печатаем информацию
+        capy.speak();              // Капибара говорит
+        capy.eat(2.0);             // Капибара ест
+        capy.swim();               // Капибара плавает
+        capy.play(1.5);            // Капибара играет
+        capy.growOlder();          // Капибара стареет
+        capy.displayInfo();        // Ещё раз печатаем информацию
     }
 }

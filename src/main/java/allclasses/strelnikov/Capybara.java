@@ -62,19 +62,4 @@ public class Capybara {
     public void displayInfo() {
         System.out.println("Имя: " + name + ", Возраст: " + age + " лет, Вес: " + weight + " кг.");
     }
-
-    // Главный метод для тестирования
-    public static void main(String[] args) {
-        // Создаём объект капибары
-        Capybara capy = new Capybara("Каппи", 3, 35.5);
-
-        // Тестируем методы
-        capy.displayInfo();        // Печатаем информацию
-        capy.speak();              // Капибара говорит
-        capy.eat(2.0);             // Капибара ест
-        capy.swim();               // Капибара плавает
-        capy.play(1.5);            // Капибара играет
-        capy.growOlder();          // Капибара стареет
-        capy.displayInfo();        // Ещё раз печатаем информацию
-    }
 }
