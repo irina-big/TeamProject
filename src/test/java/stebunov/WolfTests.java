@@ -66,11 +66,10 @@ public class WolfTests {
         assertEquals(0.0, wolf.getWeight(), 0.01);
     }
 
-    // Тест метода howl (вывод сообщения в консоль)
+    // Тест метода howl
     @Test
     public void testHowl() {
         Wolf wolf = new Wolf("Серый", 5, 25.5);
-        wolf.howl(); // Этот тест проверяет вывод консоли вручную
-        assertTrue(true); // Заглушка, чтобы тест всегда проходил
+        assertEquals("Волк Серый воет: Аууууу!", wolf.howl());
     }
 }

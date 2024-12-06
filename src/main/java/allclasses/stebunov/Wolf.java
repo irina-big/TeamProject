@@ -68,7 +68,7 @@ public class Wolf {
     }
 
     // Метод, чтобы волк выл
-    public void howl() {
-        System.out.println("Волк " + name + " воет: Аууууу!");
+    public String howl() {
+        return "Волк " + name + " воет: Аууууу!";
     }
 }

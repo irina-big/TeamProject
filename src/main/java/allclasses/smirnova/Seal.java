@@ -56,7 +56,6 @@ public class Seal {
             napCount++;
             System.out.println(name + " устал и пошел спать. Он подремал уже " + napCount + " раз.");
         }
-
         System.out.println(name + " закончил с трюками на сегодня и готов кушать рыбку!");
     }
 

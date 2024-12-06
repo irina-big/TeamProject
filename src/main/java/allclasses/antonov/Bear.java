@@ -5,17 +5,17 @@ import java.util.Random;
 public class Bear {
     public String name;
     public int hours;
-    public int pts; // Уровень кофеина в крови (0-100)
+    public int pts;
     public int numberOfGames;
     public String rank;
     public Random random = new Random(); // Поле для случайных чисел
 
-    public Bear(String name, int hours) {
+    public Bear(String name, int hours, int pts) {
         this.name = name;
         this.hours = hours;
-        this.pts = 1; // Начальный уровень кофеина
-        this.numberOfGames = 0;
-        this.rank = "Herald";
+        this.pts = pts;
+        this.numberOfGames = 0; // Изначально игр нет
+
     }
 
     public void whoAreYou() {
@@ -60,5 +60,14 @@ public class Bear {
     public void calculateHours() {
         hours = (numberOfGames * 40) / 60; // Перевод игр в часы
         System.out.println(name + " сыграл " + numberOfGames + " игр, что составляет " + hours + " часов.");
+    }
+    public void playGame() {
+        numberOfGames++;
+        pts += 50; // Например, за каждую игру добавляется 50 PTS
+        if (pts > 1200) {
+            pts = 1200; // Лимит уровня кофеина
+        }
+        System.out.println(name + " сыграл еще одну игру. Текущий PTS: " + pts);
+        yourRank(); // Обновляем и показываем ранг
     }
 }
