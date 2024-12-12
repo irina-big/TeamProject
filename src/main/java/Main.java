@@ -1,3 +1,4 @@
+import allclasses.buravlev.Pet;
 import allclasses.shepelev.shep;
 import allclasses.tovstogan.Student;
 import allclasses.tovstogan.Tovstogan;
@@ -44,7 +45,7 @@ public class Main {
         showClassesZolina();
         showClassesGavrilov();
         showClassesShepelev();
-
+        showClassesBuravlev();
     }
 
     public static void showClassesIrinaBig() throws Exception {
@@ -288,6 +289,12 @@ public class Main {
 
         System.out.println(trueDog.CheckDog());
         System.out.println(falseDog.CheckDog());
+    }
+    public static void showClassesBuravlev(){
+        System.out.println("\nДемонстрация работы класса Буравлева Максима:\n");
+        Pet cat = new Pet("Крош", 8, "Кот", 7);
+        System.out.println(cat.getInfo());
+        System.out.println(cat.isAdult());
     }
 
 
