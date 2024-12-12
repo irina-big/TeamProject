@@ -1,3 +1,4 @@
+import allclasses.gadzhiev.GadzhievClass;
 import allclasses.shepelev.shep;
 import allclasses.tovstogan.Student;
 import allclasses.tovstogan.Tovstogan;
@@ -44,7 +45,7 @@ public class Main {
         showClassesZolina();
         showClassesGavrilov();
         showClassesShepelev();
-
+        showClassesGadzhiev();
     }
 
     public static void showClassesIrinaBig() throws Exception {
@@ -282,12 +283,23 @@ public class Main {
 
     public static void showClassesShepelev() {
         System.out.println("\nДемонстрация работы класса Шепелева Егора:\n");
-
         shep trueDog = new shep("Макс");
         shep falseDog = new shep("Гриша");
 
         System.out.println(trueDog.CheckDog());
         System.out.println(falseDog.CheckDog());
+    }
+    public static void showClassesGadzhiev(){
+        System.out.println("\nДемонстрация работы класса Гаджиева ММ\n");
+        GadzhievClass gadzhiev = new GadzhievClass();
+        int sum = gadzhiev.add(5, 5);
+        int sub = gadzhiev.subtract(5, 5);
+        int mul = gadzhiev.multiply(5, 5);
+        int div = gadzhiev.divide(5, 5);
+        System.out.println("Сумма: " + sum);
+        System.out.println("Вычитание: " + sub);
+        System.out.println("Произведение: " + mul);
+        System.out.println("Деление: " + div);
     }
 
 
