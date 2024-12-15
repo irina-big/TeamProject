@@ -16,10 +16,12 @@ import allclasses.ravilova.RavilovaClass;
 import allclasses.zolina.Snake;
 import allclasses.gavrilov.Cats;
 import allclasses.saprykin.SaprykinClass;
+import allclasses.Usmonova.Hare;
 import java.time.LocalDate;
+import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         System.out.println("Hello, World!");
         // Демонстрация работы классов пакета irinabig
         try {
@@ -45,6 +47,8 @@ public class Main {
         showClassesZolina();
         showClassesGavrilov();
         showClassesShepelev();
+        showClassesUsmonova();
+
 
     }
 
@@ -318,4 +322,25 @@ public class Main {
             System.out.println(student.getName() + " - не отличник.");
         }
     }
+
+    public static void showClassesUsmonova() throws Exception {
+        System.out.println("\nДемонстрация работы классов Усмоновой Мунисы:");
+
+        // Создание объекта зайца
+        Hare hare = new Hare();
+        System.out.println("Заяц: " + hare.getBehavior());
+
+        // Поиск пищи в зависимости от времени суток и наличия хищников
+        String dayFood = hare.searchForFood("День", true);
+        String nightFood = hare.searchForFood("Ночь", false);
+        System.out.println(dayFood);
+        System.out.println(nightFood);
+
+        // Получение пищи для зайца
+        List<String> hareFood = hare.getFood("Заяц");
+        System.out.println("Заяц питается => " + hareFood.toString());
+
+    }
+
+
 }
