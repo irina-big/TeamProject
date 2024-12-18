@@ -16,6 +16,7 @@ import allclasses.ravilova.RavilovaClass;
 import allclasses.zolina.Snake;
 import allclasses.gavrilov.Cats;
 import allclasses.saprykin.SaprykinClass;
+import allclasses.yaropolov.Bebra;
 import java.time.LocalDate;
 
 public class Main {
@@ -45,6 +46,7 @@ public class Main {
         showClassesZolina();
         showClassesGavrilov();
         showClassesShepelev();
+        showClassesYaropolov();
 
     }
 
@@ -61,6 +63,41 @@ public class Main {
         System.out.println("Кошка питается => " + cat.getFood().toString());
         System.out.println("Лев питается => " + lion.getFood().toString());
         System.out.println("Кошачьи питаются => " + feline.getFood("Хищник") .toString());
+    }
+
+    public static void showClassesYaropolov() {
+        System.out.println("\nДемонстрация работы классов Ярополова Владислава:");
+
+        // Создаем объект Bebra с начальным количеством трофеев
+        Bebra player1 = new Bebra("Игрок 1", 1000);
+        System.out.println("Игрок: " + player1.playerName + ", Трофеи: " + player1.trophies + ", Боев сыграно: " + player1.battlesPlayed + ", Побед: " + player1.battlesWon);
+
+        // Играем несколько боев
+        player1.playBattle(true);
+        System.out.println("Игрок: " + player1.playerName + ", Трофеи: " + player1.trophies + ", Боев сыграно: " + player1.battlesPlayed + ", Побед: " + player1.battlesWon);
+
+        player1.playBattle(false);
+        System.out.println("Игрок: " + player1.playerName + ", Трофеи: " + player1.trophies + ", Боев сыграно: " + player1.battlesPlayed + ", Побед: " + player1.battlesWon);
+
+        player1.playBattle(true);
+        System.out.println("Игрок: " + player1.playerName + ", Трофеи: " + player1.trophies + ", Боев сыграно: " + player1.battlesPlayed + ", Побед: " + player1.battlesWon);
+
+        // Выводим статистику игрока 1
+        player1.showStatistics();
+
+        // Создаем второго игрока и проводим с ним ряд действий
+        Bebra player2 = new Bebra("Игрок 2", 500);
+        System.out.println("Игрок: " + player2.playerName + ", Трофеи: " + player2.trophies + ", Боев сыграно: " + player2.battlesPlayed + ", Побед: " + player2.battlesWon);
+
+        player2.playBattle(false);
+        System.out.println("Игрок: " + player2.playerName + ", Трофеи: " + player2.trophies + ", Боев сыграно: " + player2.battlesPlayed + ", Побед: " + player2.battlesWon);
+
+        // Выводим статистику игрока 2
+        player2.showStatistics();
+
+        // Сбрасываем трофеи у первого игрока
+        player1.resetTrophies();
+        System.out.println("Игрок: " + player1.playerName + ", Трофеи: " + player1.trophies + ", Боев сыграно: " + player1.battlesPlayed + ", Побед: " + player1.battlesWon);
     }
 
     public  static void showClassesPetrov() {
