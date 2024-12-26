@@ -4,7 +4,7 @@ import allclasses.urzhumova.Whale;
 import io.qameta.allure.Step;
 import org.junit.Test;
 import io.qameta.allure.Description;
-import io.qameta.allure.junit4.DisplayName;
+//import io.qameta.allure.junit4.DisplayName;
 import org.junit.Assert;
 
 
@@ -12,7 +12,7 @@ import java.util.List;
 
 public class WhaleTest {
     @Test
-    @DisplayName("Проверка чем питаются киты")
+    //@DisplayName("Проверка чем питаются киты")
     @Description("Киты питаются планктоном и креветками")
     public void testMethodFood() throws Exception {
         Whale whale = new Whale();
