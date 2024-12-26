@@ -21,7 +21,7 @@ public class foxTest {
     @Test
     public void setHeightNormalHeightEqualsGetHeight() throws Exception{
         Fox foxy = new Fox();
-        double testHeight = 40;
+        double testHeight = 40.0;
         foxy.setHeight(testHeight);
         Assert.assertEquals(testHeight, foxy.getHeight());
     }
