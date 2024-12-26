@@ -15,8 +15,7 @@ public class foxTest {
     public void upHuntingRangToMaxReturnP(){
         Fox foxy = new Fox();
         var maxRank = "P";
-        while(foxy.getHuntingRang() != foxy.upHuntingRang())
-            foxy.upHuntingRang();
+        while(foxy.getHuntingRang() != foxy.upHuntingRang()){}
         Assert.assertEquals(maxRank, foxy.getHuntingRang());
     }
     @Test

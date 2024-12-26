@@ -10,7 +10,7 @@ public class Fox {
     private double weight;
 
     public String upHuntingRang() {
-        if (++rank < ranks.size())
+        if (rank+1 < ranks.size())
             this.rank++;
         return ranks.get(rank);
     }
