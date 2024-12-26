@@ -1,6 +1,7 @@
 package BaranovTest;
 
 import allclasses.Baranov.Baranov;
+import io.qameta.allure.Step;
 import org.junit.Test;
 import io.qameta.allure.junit4.DisplayName;
 import io.qameta.allure.Description;
@@ -47,4 +48,15 @@ public class BaranovTest {
         Baranov baranov = new Baranov();
         assertEquals(-15, baranov.multiply(5, -3));
     }
+    @Step("Шаг первый")
+    public void methodForStep0ne()
+    {
+        System.out.println("Вызов метода шага 1");
+    }
+    @Step("Шаг второй")
+    public void methodForStepTwo()
+    {
+        System.out.println("Вызов метода шага 2");
+    }
+
 }
