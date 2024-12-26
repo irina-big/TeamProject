@@ -1,14 +1,39 @@
 package allclasses.yakimovich;
 
-public class YakimovichClass {
-    int a = 5;
+import java.util.ArrayList;
+import java.util.List;
 
-    public void setA(int a) {
-        this.a = a;
+public class YakimovichClass {
+    public int add(int a, int b) {
+        return a + b;
     }
 
-    public int Value()
-    {
-        return a*a;
+    public int subtract(int a, int b) {
+        return a - b;
+    }
+
+    public int multiply(int a, int b) {
+        if (a == 0 || b == 0) {
+            return 0; // Обработка нулевого значения для умножения
+        }
+        return a * b;
+    }
+
+    public double divide(double a, double b) {
+        if (b == 0) {
+            throw new ArithmeticException("Деление на ноль недопустимо");
+        }
+
+        return a / b;
+    }
+
+    public List<Integer> generateEvenNumbers(int n) {
+        List<Integer> evenNumbers = new ArrayList<>();
+        for (int i = 0; i <= n; i++) {
+            if (i % 2 == 0) {
+                evenNumbers.add(i);
+            }
+        }
+        return evenNumbers;
     }
 }

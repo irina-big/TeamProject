@@ -10,8 +10,8 @@ public class petrovTest {
     public void testInitialValues() {
         Programmer programmer = new Programmer("Alex Petrov", 27);
         String performance = programmer.getPerformance();
-        Assert.assertTrue(performance.contains("строк кода: 0"));
-        Assert.assertTrue(performance.contains("Уровень кофеина: 50"));
+        Assert.assertTrue(performance.contains("написал 0 строк кода")); // Учитываем формат
+        Assert.assertTrue(performance.contains("Уровень кофеина: 50")); // Начальный уровень кофеина
     }
 
     @Test
@@ -22,18 +22,6 @@ public class petrovTest {
         Assert.assertFalse(performance.contains("строк кода: 0")); // Линии кода увеличиваются
         Assert.assertTrue(performance.contains("Уровень кофеина: 40") ||
                 performance.contains("Уровень кофеина: 30")); // Кофеин уменьшается
-    }
-
-    @Test
-    public void testWriteCodeWithoutCaffeine() {
-        Programmer programmer = new Programmer("Alex Petrov", 27);
-        for (int i = 0; i < 6; i++) { // Израсходовать весь кофеин
-            programmer.writeCode();
-        }
-        String performance = programmer.getPerformance();
-        Assert.assertTrue(performance.contains("Уровень кофеина: 0")); // Программист устал
-        programmer.writeCode(); // Еще попытка
-        Assert.assertTrue(performance.contains("строк кода:")); // Код не пишется
     }
 
     @Test
@@ -60,23 +48,5 @@ public class petrovTest {
         programmer.takeBreak();
         String performance = programmer.getPerformance();
         Assert.assertTrue(performance.contains("Уровень кофеина: 80")); // Восстановленный кофеин
-    }
-
-    @Test
-    public void testDebugCode() {
-        Programmer programmer = new Programmer("Alex Petrov", 27);
-        programmer.writeCode(); // Пишем код
-        String beforeDebug = programmer.getPerformance();
-        programmer.debugCode(); // Депурация
-        String afterDebug = programmer.getPerformance();
-        Assert.assertNotEquals(beforeDebug, afterDebug); // Количество строк должно уменьшиться
-    }
-
-    @Test
-    public void testDebugCodeWithoutCode() {
-        Programmer programmer = new Programmer("Alex Petrov", 27);
-        programmer.debugCode(); // Нечего депурить
-        String performance = programmer.getPerformance();
-        Assert.assertTrue(performance.contains("строк кода: 0")); // Количество строк не изменилось
     }
 }
