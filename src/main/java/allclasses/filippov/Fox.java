@@ -6,7 +6,7 @@ import java.util.Objects;
 public class Fox {
     private final List<String> ranks = List.of("F", "E", "D", "C", "B", "A", "S", "SS", "P");
     private int rank = 0;
-    private double height;
+    private int height;
     private double weight;
 
     public String upHuntingRang() {
@@ -23,10 +23,10 @@ public class Fox {
     public String getHuntingRang() {
         return ranks.get(rank);
     }
-    public void setHeight(double height) {
+    public void setHeight(int height) {
         this.height = height;
     }
-    public double getHeight() {
+    public int getHeight() {
         return height;
     }
     public void setWeight(double weight) {
